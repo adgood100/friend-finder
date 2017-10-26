@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FriendFinder</title>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<h2>Super Friends Survey Questions</h2>
+		<hr>
+
+		<h3><strong>Tell Us About You</strong></h3>
+		<h4>Name (Required)</h4>
+		<input type="text" name="" id="name" class="form-control" required >
+
+		<h4>Role</h4>
+		<input type="text" name="" id="role" class="form-control" required >
+
+		<h4>Age</h4>
+		<input type="text" name="" id="age" class="form-control" required >
+
+		<h4>Forcepoints</h4>
+		<input type="text" name="" id="forcepoints" class="form-control" required >
+
+		<h4>Likes</h4>
+		<input type="text" name="" id="likes" class="form-control" required >
+
+		<h4>Dislikes</h4>
+		<input type="text" name="" id="dislikes" class="form-control" required >
+
+		<h4>Link to Photo Image (Required)</h4>
+		<input type="text" name="" id="photo" class="form-control" required >
+
+		<hr>
+
+		<h3><strong>Question 1</strong></h3>
+		<h4>Would your dream guy/gal tell you if he/she was a superhero?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 		<option value=""></option>
+            <option value="1">1 (Yes. He/She wouldn't lie to me)</option>
+            <option value="2">2 (Not at first, but I know him/her too well and I'll find out on my own)</option>			
+            <option value="3">3 (No, because he/she wouldn't want me to get hurt)</option>
+            <option value="4">4 (Yeah. He/She would want everyone to know)</option>
+            <option value="5">5 (Not at first because he/she wouldn't want it to change the relationship)</option>
+            <option value="6">6 (Probably. Its kind of hard to hide something like that)</option>
+      	</select>
+
+		<h3><strong>Question 2</strong></h3>
+		<h4>Which of these words might you use to describe your soulmate?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q2">
+	 		<option value=""></option>
+            <option value="1">1 (SPONTANEOUS)</option>
+            <option value="2">2 (THOUGHTFUL)</option>
+            <option value="3">3 (ANIMAL-LOVER)</option>
+            <option value="4">4 (MYSTERIOUS)</option>
+			<option value="5">5 (RESPONSIBLE)</option>
+			<option value="6">6 (PASSIONATE)</option>
+            <option value="7">7 (ADVENTUROUS)</option>
+      	</select>
+
+
+		<h3><strong>Question 3</strong></h3>
+		<h4>If you had super powers, how far to the dark side would you go?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 		<option value=""></option>
+            <option value="1">1 (I'D USE MY POWERS FOR GOOD AND GOOD ALONE)</option>
+            <option value="2">2 (I'D USE MY POWERS TO OBTAIN A COMFORTABLE LIFESTYLE)</option>
+            <option value="3">3 (I'D USE MY POWERS TO AMASS A GREAT FORTUNE BY ANY NONVIOLENT MEANS NECESSARY)</option>
+            <option value="4">4 (I'D GET RICH AND GET REVENGE ON THOSE WHO WRONGED ME)</option>
+            <option value="5">5 (I'D GO THE FULL BLOWN WORLD DOMINATION ROUTE)</option>
+      	</select>
+
+
+		<h3><strong>Question 4</strong></h3>
+		<h4>What is most the important factor in considering dating someone?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 		<option value=""></option>
+            <option value="1">1 (Looks)</option>
+            <option value="2">2 (Financial Status)</option>
+            <option value="3">3 (Ability to fly)</option>
+            <option value="4">4 (Sexual compatibility)</option>
+            <option value="5">5 (Sense of humor)</option>
+			<option value="6">6 (Similar interests)</option>
+			<option value="7">7 (Able to leap tall buildings in a single bound)</option>
+			<option value="8">8 (Whether or not they like your pet)</option>
+      	</select>
+
+
+		<h3><strong>Question 5</strong></h3>
+		<h4>If you got turned into a superhero, how would you want it to happen?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q5">
+	 		<option value=""></option>
+            <option value="1">1 (In some experiment gone wrong)</option>
+            <option value="2">2 (I'd be born a mutant)</option>
+            <option value="3">3 (I'd be a normal dude/dudette with sweet gadgets and weapons)</option>
+            <option value="4">4 (I'd be an alien from another planet)</option>
+            <option value="5">5 (I'd be a militarized weapon)</option>
+      	</select>
+
+
+		<h3><strong>Question 6</strong></h3>
+		<h4>Which best describes your extracurricular experience in high school?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q6">
+	 		<option value=""></option>
+            <option value="1">1 (I was a jock)</option>
+            <option value="2">2 (I was in the band)</option>
+            <option value="3">3 (I was in student government)</option>
+            <option value="4">4 (I worked on the school paper and/or yearbook)</option>
+            <option value="5">5 (I was always in detention)</option>
+			<option value="6">6 (I was always a loner)</option>
+      	</select>
+
+
+		<h3><strong>Question 7</strong></h3>
+		<h4>Which unfortunate adjective would your ex most likely use to describe you?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q7">
+	 		<option value=""></option>
+            <option value="1">1 (Naive)</option>
+            <option value="2">2 (Absent-minded)</option>
+            <option value="3">3 (Arrogant)</option>
+            <option value="4">4 (Volatile)</option>
+            <option value="5">5 (Closed-off)</option>
+			<option value="6">6 (Boring)</option>
+      	</select>
+
+		<h3><strong>Question 8</strong></h3>
+		<h4>In a group project/assignment, who are you, usually?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q8">
+	 		<option value=""></option>
+            <option value="1">1 (The leader who delegates)</option>
+            <option value="2">2 (The quiet one who ends up doing most of the work)</option>
+            <option value="3">3 (The person who slacks off)</option>
+            <option value="4">4 (The person who goofs off)</option>
+            <option value="5">5 (The person who surprises others by coming through in the end)</option>
+      	</select>
+
+		<h3><strong>Question 9</strong></h3>
+		<h4>Would you be the savior of saved?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q9">
+	 		<option value=""></option>
+            <option value="1">1 (Saved)</option>
+            <option value="2">2 (Depends on the day...)</option>
+            <option value="3">3 (Savior of course)</option>
+      	</select>
+
+		<h3><strong>Question 10</strong></h3>
+		<h4>What REALLY makes your blood boil?</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q10">
+	 		<option value=""></option>
+            <option value="1">1 (Injustice)</option>
+            <option value="2">2 (Oppression)</option>
+            <option value="3">3 (Someone daring to harm my loved ones)</option>
+            <option value="4">4 (Evil bad guys)</option>
+            <option value="5">5 (Ignorance of the people)</option>
+      	</select>
+
+		<br>
+		<br>
+
+		<!-- Submit Button -->
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ Submit</button>
+
+		<hr>
+
+	</div>
+
+	<!-- Modal -->
+	<div id="resultsModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h2 id="matchName"></h2>
+			<h2 id="matchRole"></h2>
+			<h2 id="matchAge"></h2>
+			<h2 id="matchForcepoints"></h2>
+			<h2 id="matchLikes"></h2>
+			<h2 id="matchDislikes"></h2>
+	        <img id="matchImage" src="http://images5.fanpop.com/image/photos/31200000/Concept-art-of-Thor-the-avengers-31250290-646-960.jpg" alt="">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+  <script type="text/javascript">
+  	$(document).ready(function() {
+//			$('select').material_select();
+			$('.modal').modal({
+				dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+	});
+
+    // Capture the form inputs 
+    $("#submit").on("click", function(event){
+    	event.preventDefault();
+    	// Form validation
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+
+		  $('.chosen-select').each(function() {
+
+		  	if( $(this).val() === "")
+		  		isValid = false
+		  })
+		  return isValid;
+		}
+
+		// If all required fields are filled
+//		if (validateForm() == true)
+//		{
+			// Create an object for the user's data
+	    	var userData = {
+	    		name: 			$("#name").val().trim(),
+				role: 			$("#role").val().trim(),
+				age: 			$("#age").val().trim(),
+				forcepoints: 	$("#forcepoints").val().trim(),
+				likes: 			$("#likes").val().trim(),
+				dislikes: 		$("#dislikes").val().trim(),
+	    		photo: 			$("#photo").val().trim(),
+	    		scores: [
+	    			$("#q1").val().trim(), 
+	    			$("#q2").val().trim(), 
+	    			$("#q3").val().trim(), 
+	    			$("#q4").val().trim(),
+	    			$("#q5").val().trim(), 
+	    			$("#q6").val().trim(), 
+	    			$("#q7").val().trim(), 
+	    			$("#q8").val().trim(), 
+	    			$("#q9").val().trim(), 
+	    			$("#q10").val().trim()
+	    			]
+	    	};
+
+
+	    	// Grab the URL of the website
+	    	var currentURL = window.location.origin;
+
+	    	// AJAX post the data to the friends API. 
+	    	$.post("/app/data/friends", userData) 
+	    		.done(function(data){
+
+	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	    		$("#matchName").text(data.name);
+				$("#matchRole").text(data.role);
+				$("#matchAge").text(data.age);
+				$("#matchForcepoints").text(data.forcepoints);
+				$("#matchLikes").text(data.likes);
+				$("#matchDislikes").text(data.dislikes);
+	    		$('#matchImage').attr("src", data.photo);
+
+		    	// Show the modal with the best match 
+		    	$("#resultsModal").modal('toggle');
+
+	    	});
+//		}
+//		else
+//		{
+//			alert("Please fill out all fields before submitting!");
+//		}
+    	
+//    	return false;
+    });
+
+
+  </script>
+
+</body>
+</html>
