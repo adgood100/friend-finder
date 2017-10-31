@@ -197,7 +197,7 @@
 			<h2 id="matchForcepoints"></h2>
 			<h2 id="matchLikes"></h2>
 			<h2 id="matchDislikes"></h2>
-	        <img id="matchImage" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	        <img id="matchImage" src="http://images5.fanpop.com/image/photos/31200000/Concept-art-of-Thor-the-avengers-31250290-646-960.jpg" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -208,22 +208,21 @@
 	</div>
 
   <script type="text/javascript">
-
-  	// Chosen CSS
-    var config = {
-      '.chosen-select'           : {},
-      '.chosen-select-deselect'  : {allow_single_deselect:true},
-      '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
-    }
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
+  	$(document).ready(function() {
+//			$('select').material_select();
+			$('.modal').modal({
+				dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+	});
 
     // Capture the form inputs 
-    $("#submit").on("click", function(){
-
+    $("#submit").on("click", function(event){
+    	event.preventDefault();
     	// Form validation
     	function validateForm() {
 		  var isValid = true;
@@ -241,26 +240,38 @@
 		}
 
 		// If all required fields are filled
-		if (validateForm() == true)
-		{
+//		if (validateForm() == true)
+//		{
 			// Create an object for the user's data
 	    	var userData = {
-	    		name: $("#name").val(),
-				role: $("#role").val(),
-				age: $("#age").val(),
-				forcepoints: $("#forcepoints").val(),
-				likes: $("#likes").val(),
-				dislikes: $("#dislikes").val(),
-	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
-	    	}
+	    		name: 			$("#name").val().trim(),
+				role: 			$("#role").val().trim(),
+				age: 			$("#age").val().trim(),
+				forcepoints: 	$("#forcepoints").val().trim(),
+				likes: 			$("#likes").val().trim(),
+				dislikes: 		$("#dislikes").val().trim(),
+	    		photo: 			$("#photo").val().trim(),
+	    		scores: [
+	    			$("#q1").val().trim(), 
+	    			$("#q2").val().trim(), 
+	    			$("#q3").val().trim(), 
+	    			$("#q4").val().trim(),
+	    			$("#q5").val().trim(), 
+	    			$("#q6").val().trim(), 
+	    			$("#q7").val().trim(), 
+	    			$("#q8").val().trim(), 
+	    			$("#q9").val().trim(), 
+	    			$("#q10").val().trim()
+	    			]
+	    	};
 
 
 	    	// Grab the URL of the website
 	    	var currentURL = window.location.origin;
 
 	    	// AJAX post the data to the friends API. 
-	    	$.post(currentURL + "../app/data/friends", userData, function(data){
+	    	$.post("/app/data/friends", userData) 
+	    		.done(function(data){
 
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
@@ -275,13 +286,13 @@
 		    	$("#resultsModal").modal('toggle');
 
 	    	});
-		}
-		else
-		{
-			alert("Please fill out all fields before submitting!");
-		}
+//		}
+//		else
+//		{
+//			alert("Please fill out all fields before submitting!");
+//		}
     	
-    	return false;
+//    	return false;
     });
 
 
