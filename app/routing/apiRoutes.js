@@ -24,7 +24,7 @@ app.post("/app/data/:friends", function(req, res) {
 
   console.log(chosen);
 
-  var userResponses = chosen.scores;
+  var userResponses = chosen["scores[]"];
 
   // Compute best super friend match
 
@@ -76,9 +76,11 @@ res.json({status: 'OK',
           matchForcepoints: matchForcepoints,
           matchLikes: matchLikes,
           matchDislikes: matchDislikes,
-          matchImage: matchImage});
+          matchImage: matchImage,
+          friends: friends
+        });
 
-  return res.json(friends);
+//  return res.json(friends);
 });
 
 // API POST Requests
