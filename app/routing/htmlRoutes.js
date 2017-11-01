@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/app/public/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "/../public/survey2.html"));
+  res.sendFile(path.join(__dirname, "/../public/survey.html"));
 });
 
 // If no matching route is found default to home
